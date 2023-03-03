@@ -9,13 +9,20 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    background-color: #FDF2E9;
+    background-color: #3f5d63;
 }
 
 .intro,
 .timer {
-    color: #1B4F72;
+    color: #920606;
     font-size: 35px;
+    letter-spacing: 1px;
+    margin: 30px 0px 10px 5%;
+}
+
+.rules{
+    color: #920606;
+    font-size: 25px;
     letter-spacing: 1px;
     margin: 30px 0px 10px 5%;
 }
@@ -25,7 +32,7 @@ html {
 .instruction-3,
 .description {
     font-size: 18px;
-    color: #1B4F72;
+    color: #ffffff;
     letter-spacing: 0.5px;
     margin: 0px 0px 15px 5%;
 }
@@ -59,7 +66,7 @@ html {
 }
 
 .odd-section {
-    background: #d3d3d3;
+    background: #ccadad;
 }
 
 .puzzle input {
@@ -67,16 +74,16 @@ html {
     font-size: 30px;
     width: 60px;
     height: 60px;
-    border: 1px #808080 solid;
+    border: 1px #333333 solid;
 }
 
 .empty-el {
-    color: #4848d4;
+    color: #920606;
 }
 
 .solve-button,
-.clear-button,
-.finish-button {
+.clear-button
+ {
     margin-top: 20px;
     background-color: #920606;
     border: none;
@@ -91,24 +98,82 @@ html {
     cursor: pointer;
 }
 
-.clear-button,
-.finish-button {
+.clear-button {
     margin-left: 15px;
 }
 
 .solve-button:hover,
-.clear-button:hover,
-.finish-button:hover {
-    background-color: #a74747;
+.clear-button:hover {
+    background-color: #920606;
 }
 
-div.timer {
-    border:1px #666666 solid;
-    width:190px;
-    height:50px;
-    line-height:50px;
-    font-size:36px;
-    font-family:"Courier New", Courier, monospace;
-    text-align:center;
-    margin:5px;
+
+.box{
+    background-color: #ffffffcb;
+    height: 200px;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    margin:5%;
+}
+
+.frame{
+    display: flex;
+    gap: 3px;
+  }
+
+.hrs,
+.min,
+.sec,
+.ms,
+.colon{
+width: 50px;
+height: 50px;
+font-size: 50px;
+text-align: center;
+line-height: 50px;
+color: #920606;
+font-family: 'Roboto', sans-serif;
+margin-top: 5%;
+}
+
+.colon{
+width: 10px;
+height: 50px;
+}
+
+.buttons{
+  margin-top: 25px;
+}
+
+.buttons button{
+ border: none;
+ padding: 5px 20px;
+ color:white;
+ border-radius: 3px;
+    background-color: #920606;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+
+.start{background-color: #920606;}
+.stop{background-color: #920606;}
+.reset{background-color:  #920606;}
+
+
+.start-active,
+.stop-active{
+  pointer-events: none;
+  opacity: 0.5;
 }
